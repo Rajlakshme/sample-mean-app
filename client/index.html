@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="meanApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+    <body>
+    <div ng-controller="carController">
+        <h3 style="margin: 40px;">Sample Mean App</h3>
+        <car-dropdown car-data="{{cars}}"></car-dropdown>
+        <!--<div class="col-xs-12 select-box">
+            <select ng-model="selectedCar" ng-change="parseCarData()">
+                <option disabled value="">Select your favourite car to know its models</option>
+                <option ng-repeat="car in cars" value="{{car}}">{{car.name}}</option>
+            </select>
+        </div>
+        <div class="col-xs-12 select-box" ng-if="selectedCar.name">
+            <select ng-model="selectedModel" ng-change="parseModelData(selectedModel)">
+                <option value="">Select your favourite model under {{selectedCar.name}}</option>
+                <option ng-repeat="model in selectedCar.models" value="{{model}}">{{model.name}}</option>
+            </select>
+            test : {{selectedModel}}
+            <div ng-if="selectedModel.content">
+                {{model.image}}
+                <img src="">
+                <p>{{model.content}}</p>
+            </div>
+        </div>-->
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="./javascripts/services/car-service.js"></script>
+    <script type="text/javascript" src="./javascripts/directives/car-directive.js"></script>
+    <script type="text/javascript" src="./javascripts/controllers/car-controller.js"></script>
+
+</body>
+</html>

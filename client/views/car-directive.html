@@ -1,0 +1,20 @@
+<style>
+    h3{
+        margin: 40px;
+    }
+    .select-box{
+        margin: 20px;
+    }
+</style>
+<select ng-model="vm.selectedCar" ng-change="vm.parseCarData()" class="select-box">
+    <option  ng-repeat="car in vm.cars" value="{{car}}">{{car.name}}</option>
+</select>
+<div ng-if="vm.selectedCar">
+    <select ng-model="vm.selectedModel" ng-change="vm.parseModelData()" class="select-box">
+        <option ng-repeat="model in vm.selectedCar.models" value="{{model}}">{{model.name}}</option>
+    </select>
+    <div ng-if="vm.selectedModel.content" class="row">
+        <div class="col-xs-2"><img src="{{vm.selectedModel.image}}" style="width:100%"></div>
+        <p class="col-xs-10">{{vm.selectedModel.content}}</p>
+    </div>
+</div>
